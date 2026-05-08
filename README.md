@@ -51,3 +51,7 @@ When you are ready to take your project live outside of the Studio environment:
 gcloud auth login
 gcloud config set project studio-597319708-5ec9f
 kubectl get pods
+
+## Source Tree 
+
+Download source tree https://www.sourcetreeapp.com/ so you can manage the site
