@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 95%; /* Clean Off-white */
+    --foreground: 139 31% 15%; /* Dark Forest Green */
+    --card: 0 0% 92%; /* Slightly darker off-white */
+    --card-foreground: 139 31% 15%;
+    --popover: 0 0% 95%;
+    --popover-foreground: 139 31% 15%;
+    --primary: 139 31% 31%; /* Forest Green */
+    --primary-foreground: 45 80% 95%;
+    --secondary: 139 20% 85%;
+    --secondary-foreground: 139 31% 15%;
+    --muted: 139 20% 88%;
+    --muted-foreground: 139 10% 40%;
+    --accent: 45 80% 53%; /* Earthy Yellow/Ochre */
+    --accent-foreground: 139 31% 15%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 139 20% 80%;
+    --input: 139 20% 85%;
+    --ring: 45 80% 58%;
+    --radius: 0.5rem;
+    --chart-1: 139 31% 31%;
+    --chart-2: 45 75% 58%;
+    --chart-3: 139 25% 50%;
+    --chart-4: 45 65% 65%;
+    --chart-5: 139 35% 40%;
+  }
+ 
+  .dark {
+    --background: 139 10% 10%; /* Dark Forest/Charcoal */
+    --foreground: 45 30% 90%;
+    --card: 139 10% 14%;
+    --card-foreground: 45 30% 90%;
+    --popover: 139 10% 10%;
+    --popover-foreground: 45 30% 90%;
+    --primary: 45 40% 92%; /* Light text on dark */
+    --primary-foreground: 139 20% 10%;
+    --secondary: 139 10% 18%;
+    --secondary-foreground: 45 30% 90%;
+    --muted: 139 10% 18%;
+    --muted-foreground: 45 15% 65%;
+    --accent: 45 80% 58%; /* Earthy Yellow/Ochre */
+    --accent-foreground: 139 10% 10%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 139 10% 25%;
+    --input: 139 10% 25%;
+    --ring: 45 80% 60%;
+    --radius: 0.5rem;
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  .prose {
+    line-height: 1.75;
+  }
+  
+  .prose blockquote {
+      @apply bg-card/50 p-1 rounded-r-lg border-l-4 border-accent text-muted-foreground;
+  }
+}
+
+@layer utilities {
+  .animate-slow-zoom {
+    animation: slow-zoom 30s ease-in-out infinite alternate;
+  }
+
+  @keyframes slow-zoom {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.1);
+    }
+  }
+}

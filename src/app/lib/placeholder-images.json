@@ -1,0 +1,28 @@
+
+{
+  "efficiency-efficacy": {
+    "url": "/019efficienteffective.png",
+    "hint": "stopwatch target",
+    "alt": "A symbolic image representing the balance between efficiency and effectiveness"
+  },
+  "fives": {
+    "url": "/020misconception5s.png",
+    "hint": "organized workshop",
+    "alt": "A visual representation of an organized workspace following 5S principles"
+  },
+  "gemba-restaurant": {
+    "url": "/021gembarestaurant.png",
+    "hint": "restaurant kitchen",
+    "alt": "A professional kitchen setting illustrating Gemba principles"
+  },
+  "kitchen-lessons": {
+    "url": "/022kitchenlessons.png",
+    "hint": "kitchen whiteboard",
+    "alt": "Symbolic image for leadership lessons learned in a kitchen setting"
+  },
+  "runners": {
+    "url": "/023runners.png",
+    "hint": "running pack",
+    "alt": "A group of runners moving together, symbolizing pack leadership"
+  }
+}

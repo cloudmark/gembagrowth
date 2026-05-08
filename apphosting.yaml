@@ -1,0 +1,15 @@
+
+# Settings to manage and configure a Firebase App Hosting backend.
+# https://firebase.google.com/docs/app-hosting/configure
+
+runConfig:
+  cpu: 1
+  memoryMiB: 2048
+
+# Environment variables for build and run time
+env:
+  - variable: NEXT_PUBLIC_SITE_URL
+    value: https://gembagrowth.com
+    availability:
+      - BUILD
+      - RUNTIME
