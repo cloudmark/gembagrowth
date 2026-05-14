@@ -9,7 +9,7 @@
  */
 
 import {ai} from '@/ai/genkit';
-import {z} from 'genkit';
+import {z} from 'zod';
 
 const GenerateBlogImageInputSchema = z.object({
   title: z.string().describe('The title of the blog post.'),
@@ -68,7 +68,7 @@ const generateBlogImageFlow = ai.defineFlow(
     inputSchema: GenerateBlogImageInputSchema,
     outputSchema: GenerateBlogImageOutputSchema,
   },
-  async input => {
+  async (input: GenerateBlogImageInput) => {
     // 1. Generate a descriptive prompt for the image model.
     const promptGenResponse = await imagePromptGenerator(input);
     const {prompt, description} = promptGenResponse.output!;
