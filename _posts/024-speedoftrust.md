@@ -1,8 +1,8 @@
 ---
 title: 'Speed of Trust'
 slug: 'trust'
-date: '2026-07-06'
-excerpt: "True team leadership isn't built overnight. It requires a fundamental shift from judgment to curiosity, from interrogation to listening. Discover how seeing your team members as people—not just employees—transforms organizational culture and unleashes the power of mutual trust."
+date: '2026-07-20'
+excerpt: "True team leadership isn't built overnight. It requires a fundamental shift from judgment to curiosity, from interrogation to listening. Discover how seeing your team members as people,not just employees, transforms organizational culture and unleashes the power of mutual trust."
 coverImage: '/024trust.png'
 author: 'Matthew Galea'
 tags: ['Trust', 'Leadership', 'Team Management', 'Gemba', 'Organizational Culture']
