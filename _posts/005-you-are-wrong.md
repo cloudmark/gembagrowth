@@ -2,7 +2,7 @@
 title: 'Why Being Wrong is a Superpower for Growth and Leadership'
 slug: 'you-are-wrong'
 date: '2025-10-30'
-excerpt: "Being wrong isn't the problem—staying wrong is. This post explores why openly embracing our mistakes is one of the most powerful keys to innovation and growth."
+excerpt: "Being wrong isn't the problem, staying wrong is. This post explores why openly embracing our mistakes is one of the most powerful keys to innovation and growth."
 coverImage: '/wrongiswonderful.png'
 author: 'Matthew Galea'
 tags: ['Mindset', 'Leadership', 'ContinuousImprovement']

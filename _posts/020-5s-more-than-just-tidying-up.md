@@ -2,7 +2,7 @@
 title: '5S - More than Just Tidying Up'
 slug: 'fives'
 date: '2026-05-11'
-excerpt: "5S isn't just about cleaning—it's a powerful visual management system. Discover how the 'Sort, Set, Shine, Standardize, Sustain' mindset reveals process health and enables growth."
+excerpt: "5S isn't just about cleaning, it's a powerful visual management system. Discover how the 'Sort, Set, Shine, Standardize, Sustain' mindset reveals process health and enables growth."
 coverImage: '/020misconception5s.png'
 author: 'Matthew Galea'
 tags: ['5S', 'Lean', 'ContinuousImprovement', 'VisualManagement']

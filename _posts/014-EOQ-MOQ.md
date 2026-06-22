@@ -2,7 +2,7 @@
 title: 'EOQ vs MOQ: When theory meets real-world complexities'
 slug: 'eoq-moq'
 date: '2026-02-16'
-excerpt: "On paper, EOQ and MOQ fit together perfectly. In practice, they often grind. This post explores the real-world complexities when a buyer's ideal order quantity clashes with a supplier's minimums."
+excerpt: "On paper, EOQ and MOQ fit together perfectly. In practice, they often grind. This post explores the real world complexities when a buyer's ideal order quantity clashes with a supplier's minimums."
 coverImage: '/014eoqmoq.png?v=2'
 author: 'Matthew Galea'
 tags: ['SupplyChain', 'Operations', 'EOQ', 'MOQ']

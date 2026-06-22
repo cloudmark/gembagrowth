@@ -2,7 +2,7 @@
 title: 'Gemba Walk - A Practical guide'
 slug: 'gemba-walk'
 date: '2026-03-02'
-excerpt: 'A step-by-step breakdown of how to conduct an effective Gemba Walk, from planning and observation to follow-up and creating a culture of trust.'
+excerpt: 'A step-by-step breakdown of how to conduct an effective Gemba Walk, from planning and observation to follow up and creating a culture of trust.'
 coverImage: '/015Gembwalk002.png'
 author: 'Matthew Galea'
 tags: ['Gemba', 'Leadership', 'ContinuousImprovement', 'Kaizen']

@@ -44,4 +44,4 @@ Avoid keeping choices in a reversible state longer than necessary. Explicit "loc
 **5. Channel counterfactuals into learning**
 Don't suppress "what‑ifs"-shape them. Encourage upward, actionable counterfactuals (*"Next time, what exactly would we change?"*) and align them with the team's motivational style so they feel right and actually stick.
 
-> **Final Thought:** Real leadership isn't about punishing the last step; it's about understanding the whole picture and building systems that allow teams to breathe and grow.
+> Real leadership isn't about punishing the last step; it's about understanding the whole picture and building systems that allow teams to breathe and grow.

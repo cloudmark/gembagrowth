@@ -2,7 +2,7 @@
 title: 'Norm Theory: The Last‑Minute Change'
 slug: 'norm-theory1'
 date: '2026-03-30'
-excerpt: "When outcomes disappoint, our minds don't just read data—they rewrite the past. Discover how Norm Theory explains our fixation on 'what if' and the last unusual step."
+excerpt: "When outcomes disappoint, our minds don't just read data, they rewrite the past. Discover how Norm Theory explains our fixation on 'what if' and the last unusual step."
 coverImage: '/017normtheory1.png'
 author: 'Matthew Galea'
 tags: ['NormTheory', 'Leadership', 'Psychology', 'DecisionMaking']
