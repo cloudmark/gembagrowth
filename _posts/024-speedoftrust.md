@@ -13,7 +13,7 @@ published: true
 
 One of the best feelings in management? Seeing a team that truly supports you. The feeling of knowing, sensing, seeing, that a team trusts you to take them forward, to push, to guide, to lead!
 
-But let's be honest, this isn't utopia. It doesn't happen overnight. It takes effort, patience, and a lot of trust. Trust:both ways!
+But let's be honest, this isn't utopia. It doesn't happen overnight. It takes effort, patience, and a lot of trust. **Trust: Both Ways!**
 
 > Trust is the foundation of great teams. It transforms how we work together and what we accomplish.
 
