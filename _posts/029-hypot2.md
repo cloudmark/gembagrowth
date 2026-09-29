@@ -45,7 +45,7 @@ It depends entirely on the context, but the thought process is universal:
 - ->- In manufacturing: Is it worse to scrap a product that is actually good (Type I) or ship a defective product to a customer (Type II)?
 - ->- In pharmaceuticals: Is it worse to approve a drug that does nothing (Type I) or fail to approve a drug that would have helped (Type II)?
 
-These examples illustrate an important truth:7
+These examples illustrate an important truth:
 
 Type II errors often have more severe consequences, yet they are harder to detect.
 
