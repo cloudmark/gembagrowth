@@ -6,10 +6,10 @@ import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import { Toaster } from '@/components/ui/toaster';
 import Image from 'next/image';
-import { Inter, Lora } from 'next/font/google';
+import { Source_Sans_3, Lora, Manrope } from 'next/font/google';
 import Script from 'next/script';
 
-const fontBody = Inter({
+const fontBody = Source_Sans_3({
   subsets: ['latin'],
   variable: '--font-body',
 });
@@ -18,6 +18,8 @@ const fontHeadline = Lora({
   subsets: ['latin'],
   variable: '--font-headline',
 });
+
+const fontBlogHeading = Manrope({ subsets: ['latin'], variable: '--font-blog-heading', display: 'swap' });
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://gembagrowth.com';
 
@@ -29,7 +31,10 @@ export const metadata: Metadata = {
   description: "I share my journey and practical insights on leadership, lean management, and continuous improvement. Let's connect and grow together.",
   metadataBase: new URL(siteUrl),
   icons: {
-    icon: '/favicon.ico', // Explicitly point to favicon to avoid build discovery errors
+    icon: [
+      { url: '/favicon.ico?v=forest-badge', type: 'image/x-icon', sizes: '16x16 32x32 48x48 64x64 128x128 256x256' },
+      { url: '/brand-icon.svg?v=forest-badge', type: 'image/svg+xml', sizes: 'any' },
+    ],
   },
   openGraph: {
     type: 'website',
@@ -59,7 +64,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${fontBody.variable} ${fontHeadline.variable} h-full scroll-smooth`} suppressHydrationWarning>
+    <html lang="en" className={`${fontBody.variable} ${fontHeadline.variable} ${fontBlogHeading.variable} h-full scroll-smooth`} suppressHydrationWarning>
       <head>
         <Script async src="https://www.googletagmanager.com/gtag/js?id=G-EKVWCH1NL6"></Script>
         <Script id="google-analytics">
@@ -74,7 +79,7 @@ export default function RootLayout({
       </head>
       <body className={cn("font-body antialiased flex flex-col min-h-screen", "bg-background")} suppressHydrationWarning>
         
-        <div className="fixed inset-0 -z-10 h-full w-full">
+        <div className="site-backdrop fixed inset-0 -z-10 h-full w-full">
             <Image
                 src="/background.png"
                 alt="background"

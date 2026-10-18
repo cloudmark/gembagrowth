@@ -1,9 +1,3 @@
-
-'use client';
-
-import { Award } from 'lucide-react';
-import { Card } from '@/components/ui/card';
-
 const certifications = [
   {
     title: 'European Engineer (Eur. Ing.)',
@@ -19,30 +13,19 @@ const certifications = [
 
 export default function ProfessionalCertifications() {
   return (
-    <div className="my-12">
-      <h3 className="text-2xl font-headline font-bold text-primary mb-6 text-center">
-        Professional Certifications
-      </h3>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {certifications.map((cert) => (
-          <Card key={cert.title} className="group hover:bg-card/90 shadow-sm hover:shadow-md transition-shadow duration-300">
-            <div className="flex items-center p-4 gap-4">
-                <div className="flex-shrink-0">
-                    <div className="p-2 bg-accent/10 rounded-full">
-                        <Award className="h-6 w-6 text-accent" />
-                    </div>
-                </div>
-                <div className="flex-grow">
-                    <h4 className="font-headline text-lg text-primary font-semibold">
-                        {cert.title}
-                    </h4>
-                    <p className="text-sm text-muted-foreground">{cert.issuer}</p>
-                    <p className="text-xs text-muted-foreground/80 mt-1">Awarded {cert.year}</p>
-                </div>
+    <section className="biography-certifications" aria-labelledby="certifications-heading">
+      <h2 id="certifications-heading">Professional Certifications</h2>
+      <div className="biography-certifications-list">
+        {certifications.map(cert => (
+          <div key={cert.title} className="biography-certification">
+            <div>
+              <h3>{cert.title}</h3>
+              <p>{cert.issuer}</p>
             </div>
-          </Card>
+            <p className="certification-year">Awarded {cert.year}</p>
+          </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }

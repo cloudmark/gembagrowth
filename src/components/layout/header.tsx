@@ -1,8 +1,10 @@
 'use client';
 
+import BrandLogo from '@/components/brand-logo';
+
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, Linkedin, Sprout } from 'lucide-react';
+import { Menu, Linkedin } from 'lucide-react';
 import { useState } from 'react';
 
 import { cn } from '@/lib/utils';
@@ -11,6 +13,7 @@ import {
   Sheet,
   SheetContent,
   SheetTrigger,
+  SheetTitle,
 } from '@/components/ui/sheet';
 
 const navItems = [
@@ -23,15 +26,12 @@ export default function Header() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-background/80 backdrop-blur-sm sticky top-0 z-40 border-b">
-      <nav className="w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header className="site-header bg-background/80 backdrop-blur-sm sticky top-0 z-40 border-b">
+      <nav aria-label="Main navigation" className="w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5 shrink-0 group">
-            <Sprout className="h-7 w-7 text-primary transition-transform group-hover:rotate-12" />
-            <span className="font-headline text-2xl font-bold tracking-tight">
-              <span className="text-primary">GembaGrowth</span>
-            </span>
+            <BrandLogo />
           </Link>
           
           {/* Desktop Navigation */}
@@ -40,15 +40,16 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
+                aria-current={(item.href === '/' ? pathname === '/' : pathname.startsWith('/blog')) ? 'page' : undefined}
                 className={cn(
-                  'font-semibold text-lg transition-colors hover:text-accent',
-                  pathname === item.href ? 'text-primary' : 'text-foreground/80'
+                  'site-nav-link',
+                  (item.href === '/' ? pathname === '/' : pathname.startsWith('/blog')) ? 'text-primary' : 'text-foreground/80'
                 )}
               >
                 {item.name}
               </Link>
             ))}
-             <Button asChild variant="ghost" size="icon" className="text-muted-foreground hover:bg-transparent hover:text-accent">
+             <Button asChild variant="ghost" size="icon" className="site-icon-control text-muted-foreground">
                 <a href="https://www.linkedin.com/in/mgalea-gembagrowth/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                     <Linkedin className="h-5 w-5" />
                 </a>
@@ -59,19 +60,17 @@ export default function Header() {
           <div className="flex md:hidden">
             <Sheet open={isMobileMenuOpen} onOpenChange={setMobileMenuOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon">
+                <Button variant="ghost" size="icon" className="site-icon-control">
                   <Menu className="h-6 w-6" />
                   <span className="sr-only">Open main menu</span>
                 </Button>
               </SheetTrigger>
-              <SheetContent side="left" className="w-full max-w-sm p-0">
+              <SheetContent side="left" className="site-mobile-menu w-full max-w-sm p-0" aria-describedby={undefined}>
+                <SheetTitle className="sr-only">Main navigation</SheetTitle>
                 <div className="h-full flex flex-col">
                   <div className="p-4 border-b">
                     <Link href="/" className="flex items-center gap-2.5" onClick={() => setMobileMenuOpen(false)}>
-                       <Sprout className="h-6 w-6 text-primary" />
-                       <span className="font-headline text-xl font-bold">
-                        <span className="text-primary">GembaGrowth</span>
-                      </span>
+                       <BrandLogo />
                     </Link>
                   </div>
                   <div className="flex-grow py-6 px-4">
@@ -80,10 +79,11 @@ export default function Header() {
                         <Link
                           key={item.name}
                           href={item.href}
+                          aria-current={(item.href === '/' ? pathname === '/' : pathname.startsWith('/blog')) ? 'page' : undefined}
                           onClick={() => setMobileMenuOpen(false)}
                           className={cn(
-                            'text-lg font-semibold px-4 py-2 rounded-md transition-colors hover:bg-muted',
-                            pathname === item.href ? 'text-primary bg-muted' : 'text-foreground'
+                            'site-mobile-link text-lg font-semibold px-4 py-2 rounded-md transition-colors hover:bg-muted',
+                            (item.href === '/' ? pathname === '/' : pathname.startsWith('/blog')) ? 'text-primary bg-muted' : 'text-foreground'
                           )}
                         >
                           {item.name}
@@ -92,7 +92,7 @@ export default function Header() {
                     </nav>
                   </div>
                   <div className="p-4 border-t flex justify-end">
-                     <Button asChild variant="ghost" size="icon" className="text-muted-foreground hover:bg-transparent hover:text-accent">
+                     <Button asChild variant="ghost" size="icon" className="site-icon-control text-muted-foreground">
                         <a href="https://www.linkedin.com/in/mgalea-gembagrowth/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                             <Linkedin className="h-6 w-6" />
                         </a>

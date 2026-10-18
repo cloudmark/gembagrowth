@@ -5,6 +5,7 @@ import { Calendar, User, HelpCircle, ChevronRightCircle, ArrowRight } from 'luci
 import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
 import Image from 'next/image';
+import { getThumbnailStyle } from '@/lib/thumbnail-framing';
 import FiveStrategies from '@/components/five-strategies';
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
@@ -108,7 +109,7 @@ const CustomMarkdown = ({ content }: { content: string }) => {
               alt={props.alt || ''}
               width={700}
               height={400}
-              className="rounded-lg shadow-lg object-contain w-full inline-block"
+              className="rounded-xl object-contain w-full inline-block"
             />
           </span>
         ),
@@ -198,17 +199,17 @@ export default function BlogPostPage({ params, searchParams }: BlogPostPageProps
   const contentAfterStrategies = contentParts.length > 1 ? contentParts[1] : '';
 
   return (
-    <div className="py-12">
+    <div className="article-surface py-12">
       {isPreview && (
         <div className="mb-8 p-4 bg-yellow-200 text-yellow-900 rounded-lg text-center font-bold">
           PREVIEW MODE: This post is currently unpublished or scheduled.
         </div>
       )}
       
-      <article className="prose prose-lg max-w-none">
+      <article className="article-reading prose prose-lg max-w-none">
         <h1>{post.title}</h1>
         
-        <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-muted-foreground not-prose text-base">
+        <div className="article-meta flex flex-wrap items-center gap-x-6 gap-y-2 text-muted-foreground not-prose text-base">
           <div className="flex items-center gap-2">
             <User className="h-4 w-4" />
             <span>{post.author}</span>
@@ -219,15 +220,16 @@ export default function BlogPostPage({ params, searchParams }: BlogPostPageProps
           </div>
         </div>
 
-        <div className="mt-8">
+        <div className="article-body mt-8">
             {post.coverImage && (
-              <div className="w-full md:w-2/5 md:float-right md:ml-8 mb-6 not-prose">
+              <div className="article-cover w-full md:w-2/5 md:float-right md:ml-8 mb-6 not-prose">
                 <Image
                   src={post.coverImage}
                   alt={post.title}
                   width={400}
                   height={500}
-                  className="w-full rounded-lg shadow-lg object-cover"
+                  sizes="(min-width: 768px) 320px, 100vw"
+                  className="w-full rounded-xl object-cover"
                 />
               </div>
             )}
@@ -239,50 +241,52 @@ export default function BlogPostPage({ params, searchParams }: BlogPostPageProps
             <CustomMarkdown content={contentAfterStrategies} />
         </div>
 
-        <div className="mt-12 pt-8 border-t clear-both not-prose">
+        <div className="article-end mt-12 pt-8 border-t clear-both not-prose">
             {post.tags && post.tags.length > 0 && (
             <div className="flex flex-wrap items-center gap-2 mb-8">
                 {post.tags.map((tag) => (
-                <Badge key={tag} variant="secondary" className="font-semibold">
+                <Badge key={tag} variant="secondary" className="article-tag font-semibold">
                     {tag}
                 </Badge>
                 ))}
             </div>
             )}
-            <Link href="/blog" className="text-accent font-semibold hover:underline">
+            <Link href="/blog" className="article-back text-link font-semibold hover:underline">
             &larr; Back to all posts
             </Link>
         </div>
       </article>
 
       {relatedPosts.length > 0 && (
-        <section className="mt-16 pt-12 border-t">
-          <h2 className="font-headline text-3xl font-bold text-primary mb-8">Related Insights</h2>
+        <section className="article-related mt-16 pt-12 border-t">
+          <h2 className="article-related-heading text-3xl font-bold text-primary mb-8">Related Insights</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {relatedPosts.map((related) => (
-              <Link key={related.slug} href={`/blog/${related.slug}`} className="group h-full">
-                <Card className="h-full flex flex-col overflow-hidden transition-all duration-300 group-hover:shadow-md border-muted/50">
+              <Link key={related.slug} href={`/blog/${related.slug}`} className="article-related-link group h-full">
+                <Card className="article-related-card h-full flex flex-col overflow-hidden">
                   {related.coverImage && (
-                    <div className="relative h-40 overflow-hidden">
+                    <div className="article-related-cover relative h-36 overflow-hidden">
                       <Image
                         src={related.coverImage}
                         alt={related.title}
                         fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        sizes="(min-width: 1280px) 336px, (min-width: 768px) 33vw, 100vw"
+                        style={getThumbnailStyle(related.coverImage)}
+                        className="object-cover"
                       />
                     </div>
                   )}
                   <CardHeader className="p-4 flex-grow">
-                    <CardTitle className="font-headline text-lg text-primary line-clamp-2 group-hover:text-accent transition-colors">
+                    <CardTitle className="article-related-title text-primary line-clamp-2">
                       {related.title}
                     </CardTitle>
                   </CardHeader>
-                  <CardFooter className="p-4 pt-0 text-xs text-muted-foreground flex justify-between items-center">
+                  <CardFooter className="article-related-footer p-4 text-xs text-muted-foreground flex justify-between items-center">
                     <div className="flex items-center gap-1">
                       <Calendar className="h-3 w-3" />
                       <time dateTime={related.date}>{new Date(related.date).toLocaleDateString('en-GB', { month: 'short', day: 'numeric', year: 'numeric' })}</time>
                     </div>
-                    <div className="flex items-center text-accent font-semibold opacity-0 group-hover:opacity-100 transition-opacity">
+                    <div className="article-related-read flex items-center font-semibold">
                       Read <ArrowRight className="ml-1 h-3 w-3" />
                     </div>
                   </CardFooter>

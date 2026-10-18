@@ -63,35 +63,38 @@ export default function BlogClient({ allPosts }: BlogClientProps) {
 
   return (
     <>
-      <div className="flex justify-center items-center gap-4 mb-12">
-          <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                  <Button variant="outline">
-                      <ListFilter className="mr-2 h-4 w-4" />
-                      {getTriggerText()}
-                  </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-56">
-                  <DropdownMenuLabel>Filter Posts by Tag</DropdownMenuLabel>
-                  <DropdownMenuSeparator />
-                  {allTags.map(tag => (
-                      <DropdownMenuCheckboxItem
-                          key={tag}
-                          checked={selectedTags.includes(tag)}
-                          onSelect={(e) => e.preventDefault()} // Prevents menu from closing
-                          onClick={() => handleTagSelection(tag)}
-                      >
-                          {tag}
-                      </DropdownMenuCheckboxItem>
-                  ))}
-              </DropdownMenuContent>
-          </DropdownMenu>
-          {selectedTags.length > 0 && (
-              <Button variant="ghost" onClick={() => setSelectedTags([])} className="text-muted-foreground">
-                  <X className="mr-2 h-4 w-4" />
-                  Clear Filters
-              </Button>
-          )}
+      <div className="blog-filters">
+          <h2>Blog</h2>
+          <div className="blog-filter-controls">
+            <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                    <Button variant="outline" className="blog-filter-button">
+                        <ListFilter className="h-4 w-4" />
+                        {getTriggerText()}
+                    </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="blog-filter-menu w-56">
+                    <DropdownMenuLabel>Filter Posts by Tag</DropdownMenuLabel>
+                    <DropdownMenuSeparator />
+                    {allTags.map(tag => (
+                        <DropdownMenuCheckboxItem
+                            key={tag}
+                            checked={selectedTags.includes(tag)}
+                            onSelect={(e) => e.preventDefault()} // Prevents menu from closing
+                            onClick={() => handleTagSelection(tag)}
+                        >
+                            {tag}
+                        </DropdownMenuCheckboxItem>
+                    ))}
+                </DropdownMenuContent>
+            </DropdownMenu>
+            {selectedTags.length > 0 && (
+                <Button variant="ghost" onClick={() => setSelectedTags([])} className="blog-clear-filters text-muted-foreground">
+                    <X className="h-4 w-4" />
+                    Clear Filters
+                </Button>
+            )}
+          </div>
       </div>
       
       <BlogList allPosts={filteredPosts} />

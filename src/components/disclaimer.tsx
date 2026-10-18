@@ -2,7 +2,7 @@ import { Separator } from '@/components/ui/separator';
 
 export default function Disclaimer() {
   return (
-    <div className="w-full max-w-screen-xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+    <div className="site-disclaimer w-full max-w-screen-xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
       <Separator className="my-8" />
       <div className="text-center text-xs text-muted-foreground">
         <h4 className="font-bold mb-2">Disclaimer</h4>
