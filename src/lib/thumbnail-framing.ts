@@ -41,7 +41,7 @@ const framing: Record<string, Framing> = {
 
 export function getThumbnailStyle(src: string): CSSProperties {
   const crop = framing[src.split('?')[0]];
-  if (!crop) return { objectFit: 'contain' };
+  if (!crop) return { objectFit: 'cover', objectPosition: 'center' };
   return {
     objectFit: 'cover',
     objectPosition: crop.position,
