@@ -30,7 +30,7 @@ Let’s look closer:
 
 Suddenly, these teams are very different.
 
-Team A is consistent. Team B is… let’s just say, heavily reliant on one very tall individual. If that player has an off day, the team quite literally falls short.
+Team A is consistent. Team B is… let’s just say, heavily reliant on one very tall individual. If that player has a off day, the team quite literally falls short.
 
 So while the average tells you something, it does not tell you everything.
 
@@ -52,7 +52,7 @@ The result?
 
 Zero.
 
-Which is not helpful at all. It would suggest there is no variability, even when there clearly is.
+Which is not helpful at all. It would suggest there is no **variability**, even when there clearly is.
 
 ### **First Attempt: Absolute Values**
 
@@ -69,8 +69,8 @@ This is where the key idea of standard deviation comes in.  Instead of just taki
 
 For example:
 
-- A deviation of 2 becomes 22 = 4
-- A deviation of 10 becomes 102= 100
+- A deviation of 2 becomes 2<sup>2</sup> = 4
+- A deviation of 10 becomes 10<sup>2</sup>= 100
 
 So larger gaps grow much faster. This reflects the fact that extreme values matter more when assessing consistency.
 
