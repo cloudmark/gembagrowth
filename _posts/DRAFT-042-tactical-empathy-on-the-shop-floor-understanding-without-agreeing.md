@@ -53,7 +53,7 @@ But people do not operate purely on logic. They operate through a mixture of log
 
 Before people engage with your solution, they often want confidence that you understand their problem.
 
-This is where Chris Voss's concept of **tactical empathy** becomes so powerful.[ ](https://gsi-my.sharepoint.com/personal/matthew_galea_novanta_com/_layouts/15/Doc.aspx?sourcedoc=%7B69BFD05C-F718-4D80-AA0D-9BAC543B8D0D%7D&file=Never%20Split%20the%20Difference.pptx&action=edit&mobileredirect=true)[Never Split the Difference](https://gsi-my.sharepoint.com/personal/matthew_galea_novanta_com/_layouts/15/Doc.aspx?sourcedoc=%7B69BFD05C-F718-4D80-AA0D-9BAC543B8D0D%7D&file=Never%20Split%20the%20Difference.pptx&action=edit&mobileredirect=true) describes tactical empathy as recognising and vocalising another person's perspective without necessarily agreeing with it.[ ](https://gsi-my.sharepoint.com/personal/matthew_galea_novanta_com/_layouts/15/Doc.aspx?sourcedoc=%7B69BFD05C-F718-4D80-AA0D-9BAC543B8D0D%7D&file=Never%20Split%20the%20Difference.pptx&action=edit&mobileredirect=true)
+This is where Chris Voss's concept of **tactical empathy** becomes so powerful. **Never Split the Difference** describes tactical empathy as recognising and vocalising another person's perspective without necessarily agreeing with it.
 
 The distinction is critical. Understanding somebody's concern is not the same as agreeing with it.
 
